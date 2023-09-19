@@ -1,0 +1,202 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
+
+/* COLORS */
+
+:root {
+    /* Botones e interacciones clave */
+    --primary: #c03834;
+    /* Color de fondo */
+    --secondary: #333333;
+    /* Header */
+    --terciary: #000000;
+    /* Letras principales */
+    --fonts: #666666;
+    /* Secciones y fuente secundaria */
+    --font2: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "Oswald";
+}
+
+body {
+    background-color: var(--secondary);
+    color: var(--fonts);
+}
+
+header {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    height: 100px;
+    background: var(--font2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    gap: 10px;
+}
+
+a {
+    color: var(--fonts);
+}
+
+/* ZONA IZQUIERDA */
+.logo-envio,
+.logo,
+.envio {
+    display: flex;
+}
+
+.logo-envio {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 10px;
+    width: 400px;
+    height: 70px;
+    max-width: 450px;
+    max-height: 90px;
+    gap: 2px;
+}
+
+.logo {
+    margin: 0;
+    padding: 1px;
+    width: 550px;
+    max-height: 40px;
+    max-width: 310px;
+}
+
+.logo img {
+    width: 300px;
+    height: 30px;
+    padding: 1px;
+}
+
+.envio {
+    align-items: center;
+    max-width: 250px;
+    margin-left: 7px;
+    padding: 1px;
+    height: 25px;
+    font-size: 12px;
+}
+
+.envio img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ZONA MEDIA */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    height: 70px;
+    max-width: 450px;
+    margin-top: 10px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+ul {
+    display: flex;
+    padding: 5px;
+    gap: 15px;
+    font-size: 20px;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+#barra-busqueda {
+    width: 400px;
+    max-width: 400px;
+    background-color: var(--secondary);
+    padding: 5px;
+    border: 1px solid var(--primary);
+    height: 20px;
+}
+
+#barra-busqueda::placeholder{
+    color: var(--font2);
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+#barra-busqueda:hover{
+    border: 1px solid var(--secondary);
+    background-color: var(--primary);
+}
+
+/* ZONA DERECHA */
+
+.sesion-cart,
+.login,
+.cart {
+    display: flex;
+}
+
+.sesion-cart {
+    padding: 5px 10px;
+    max-width: 450px;
+    width: 400px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.login {
+    gap: 5px;
+}
+
+.cart {
+    margin-right: 5px;
+}
+
+.cart img {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+}
+
+/* SLIDER */
+.slider {
+    display: flex;
+    /* Colocamos la propiedad nowrap para que los elementos sigan estando uno al lado del otro a pesar de que superen el tamaño de div */
+    flex-wrap: nowrap;
+    height: 665px;;
+    /* Para que los cambios no sean bruscos */
+    transition: all 0.5s ease-in-out;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.slider-container {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+.slider img {
+width: 100%;
+margin: 0 auto;
+/* Para que las imagenes tengan siempre la misma proporcion de altura y anchura */
+aspect-ratio: 16 / 9;
+/* Permite que la imagen crezca horizontal o verticalmente segun lo que sea necesario */
+object-fit: cover;
+}
