@@ -132,13 +132,13 @@ a:hover {
     height: 20px;
 }
 
-#barra-busqueda::placeholder{
+#barra-busqueda::placeholder {
     color: var(--font2);
     letter-spacing: 1px;
     font-style: italic;
 }
 
-#barra-busqueda:hover{
+#barra-busqueda:hover {
     border: 1px solid var(--secondary);
     background-color: var(--primary);
 }
@@ -175,28 +175,164 @@ a:hover {
 }
 
 /* SLIDER */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
 .slider {
     display: flex;
     /* Colocamos la propiedad nowrap para que los elementos sigan estando uno al lado del otro a pesar de que superen el tamaño de div */
     flex-wrap: nowrap;
-    height: 665px;;
+    height: 665px;
+    ;
     /* Para que los cambios no sean bruscos */
     transition: all 0.5s ease-in-out;
     align-items: center;
     margin: 0 auto;
 }
 
-.slider-container {
+#slider-container {
     overflow: hidden;
     margin: 0 auto;
     max-width: 1800px;
+    height: 700px
 }
 
 .slider img {
-width: 100%;
-margin: 0 auto;
-/* Para que las imagenes tengan siempre la misma proporcion de altura y anchura */
-aspect-ratio: 16 / 9;
-/* Permite que la imagen crezca horizontal o verticalmente segun lo que sea necesario */
-object-fit: cover;
+    width: 100%;
+
+    margin: 0 auto;
+    /* Para que las imagenes tengan siempre la misma proporcion de altura y anchura */
+    aspect-ratio: 16 / 9;
+    /* Permite que la imagen crezca horizontal o verticalmente segun lo que sea necesario */
+    object-fit: cover;
+    position: relative;
+    border-radius: 0px 0px 10px 10px;
 }
+
+hr {
+    margin: 20px auto;
+    border: 1px solid var(--primary);
+    border-radius: 100px;
+    width: 80%;
+    max-width: 80%
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1800px;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to top, var(--fonts), var(--font2) 30%);
+    margin: 0px auto;
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--fonts);
+}
+
+h1 img {
+    margin: 50px auto 10px;
+    width: 100%;
+}
+
+.title-container h2 {
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--primary)
+}
+
+/* OFER */
+
+#ofer,
+.ofer-desc,
+.ofer-container,
+.ofer-redirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#ofer {
+    max-width: 1800px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+.ofer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin: 10px auto;
+    padding: 10px;
+    /* background-color: aqua; */
+}
+
+.ofer-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 400px;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(to right, var(--font2), var(--fonts));
+}
+
+.animado {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.ofer-card2 {
+    flex-direction: row-reverse;
+    background: linear-gradient(to left, var(--font2), var(--fonts));
+}
+
+.ofer-desc {
+    text-align: justify;
+    padding: 30px;
+    width: 50%;
+}
+
+.ofer-redirect {
+    width: 50%;
+}
+
+.ofer-redirect img {
+    width: 450px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px 20px;
+    border-radius: 10px;
+}
+
+.ofer-button {
+    width: 50%;
+    height: 30px;
+}
+
+/* ANIMACION DE LAS OFER-CARDS */
+.mostrarIzquierda {
+    animation: mostrarIzquierda 3s;
+}
+
+@keyframes mostrarIzquierda {
+    0% {
+        transform: translateX(-60px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} 

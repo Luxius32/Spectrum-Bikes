@@ -21,3 +21,24 @@ setInterval(() => {
     }
 }, 5000);
 
+// ANIMACION OFER 
+// Seleccionamos los elementos a manipular
+let animado = document.querySelectorAll('.animado');
+
+// Creamos una función que nos permite detectar la cantidad de scroll que se hace para hacer aparecer los elementos
+const mostrarScroll = () => {
+    // Variable que me permite conocer la cantidad de scroll que vengo haciendo
+    let scrollTop = document.documentElement.scrollTop;
+
+    // Tengo que detectar la distancia que exite entre la ventana y el elemento que quiero hacer aparecer
+    for (let i = 0; i < animado.length; i++) {
+        // Primero contamos la distancia entre el inicio de la ventana y el elemento a aparecer
+        let alturaAnimado = animado[i].offsetTop;
+        if (alturaAnimado - 400 < scrollTop) {
+            animado[i].style.opacity = 1;
+            animado[i].classList.add('mostrarIzquierda');
+        }
+    }
+};
+
+window.addEventListener('scroll', mostrarScroll);
