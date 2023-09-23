@@ -42,3 +42,38 @@ const mostrarScroll = () => {
 };
 
 window.addEventListener('scroll', mostrarScroll);
+
+// PRODUCTOS EN OFERTA
+// Defino las variables necesarias de los elementos html
+const addCarrito = document.querySelector('.boton-de-oferta');
+const ofertasContainer = document.querySelector('.ofertas-container');
+
+// Función para renderizar una lista de productos
+// Función auxiliar
+const createProductTemplate = (product) => {
+    // Traemos todos los elementos que tiene el objeto
+    const { id, titulo, imagen, precio, oferta } = product;
+    return `<div class="card-oferta">
+    <div class="card-oferta-top">
+        <h3>${titulo}</h3>
+        <img src=${imagen} alt=${titulo} class="foto-portada">
+    </div>
+    <div class="card-oferta-bot">
+        <h3>12 CUOTAS SIN INTERÉS <img src="/img/Iconos/tarjeta.svg" alt="tarjeta-de-credito"></h3>
+        <p>${precio}</p>
+        <span>${oferta}</span>
+        <button class="boton-de-oferta" data-id='${id}' data-titulo='${titulo}' data-img='${imagen}'>AGREGAR AL CARRITO</button>
+    </div>
+</div>`
+};
+
+const renderProducts = (productList) => {
+    ofertasContainer.innerHTML += productList.map(createProductTemplate).join('')
+}
+
+// Función inicializadora y renderizamos los productos
+const init = () => {
+    renderProducts(productsOffer);
+}
+
+init();
