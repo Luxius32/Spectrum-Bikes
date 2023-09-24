@@ -119,7 +119,9 @@
                 </div>
             </div>
         </section>
+
         <hr>
+
         <section id="categorias">
             <div class="grid-categ">
                 <div class="categ-card">
@@ -166,31 +168,68 @@
         <section id="productos-oferta">
             <h2>OFERTAS DEL MES </h2>
             <div class="ofertas-container">
-                <!-- <div class="card-oferta">
-                    <div class="card-oferta-top">
-                        <h3>Bici Vairo Modelo Xr 5-0d 2x10</h3>
-                        <img src="/img/Catalogo/vairo.jpg" alt="bicicletas" class="foto-portada">
-                    </div>
-                    <div class="card-oferta-bot">
-                        <h3>12 CUOTAS SIN INTERÉS <img src="/img/Iconos/tarjeta.svg" alt="tarjeta-de-credito"></h3>
-                        <p>$156.000,00</p>
-                        <span>$130.000,00</span>
-                        <button class="boton-de-oferta">Agregar al carrito</button>
-                    </div>
-                </div> -->
             </div>
         </section>
         <hr>
-
-
-
     </main>
 
-
-
-
     <footer>
+        <section id="contacto">
+            <div class="contacto-top">
+                <h2>COMUNICATE CON NUESTRO EQUIPO</h2>
+                <p>Si tuviste algun inconveniente con tu producto, queres dejar una sugerencia o necesitas
+                    asesoramiento, completa el siguiente formulario con tus datos y nuestro equipo se estará comunicando
+                    con vos.</p>
+            </div>
+            <form action="">
+                <fieldset>
+                    <label for="nombres"><input type="text" id="nombres">Nombres</label>
+                    <label for="apellidos"><input type="text" id="apellidos">Apellidos</label>
+                    <label for="email"><input type="email" id="email">Email</label>
+                </fieldset>
+                <fieldset>
+                    <label for="motivo"><input type="text" id="motivo">Motivo del mensaje
+                        <select id="motivo" name="motivo">
+                            <option value="">(seleccione una opción)</option>
+                            <option value="1">Producto defectuoso</option>
+                            <option value="2">Sugerencias</option>
+                            <option value="3">Asesoramiento</option>
+                            <option value="4">Otros</option>
+                        </select>
+                    </label>
+                    <label for="descripcion">
+                        <textarea name="descripcion" id="descripcion" cols="30" rows="10"
+                            placeholder="Escriba una breve descripción"></textarea>
+                    </label>
+                </fieldset>
 
+            </form>
+        </section>
+
+        <section id="proveedores">
+            <div class="slider-prov-container">
+                <div class="slider-prov">
+                    <img src="/img/Marcas svg/Giant.svg" alt="Giant">
+                    <img src="/img/Marcas svg/Venzo.svg" alt="Venzo">
+                    <img src="/img/Marcas svg/Raleigh.svg" alt="Raleigh">
+                    <img src="/img/Marcas svg/Santa Cruz.svg" alt="Santa-Cruz">
+                    <img src="/img/Marcas svg/Specialized.svg" alt="Specialized">
+                </div>
+            </div>
+        </section>
+
+        <section id="cierre">
+            <h4>Seguinos en nuestras redes</h4>
+            <div class="redes">
+                <img src="/img/Iconos/Facebook.png" alt="Facebook">
+                <img src="/img/Iconos/Instagram.png" alt="Instagram">
+                <img src="/img/Iconos/Pinterest.png" alt="Pinterest">
+            </div>
+            <div class="copyright">
+                <img src="/img/Iconos/copyright.png" alt="copyright">
+                <h5>Spectrum Bikes 2023</h5>
+            </div>
+        </section>
     </footer>
     <script src="/data.js"></script>
     <script src="/main.js"></script>
