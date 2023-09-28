@@ -26,8 +26,8 @@
         <!-- ZONA MEDIA -->
         <nav class="navbar">
             <!-- Barra de busqueda -->
-            <label for="barra-busqueda"><input type="text" id="barra-busqueda" name="barra-busqueda"
-                    placeholder="Busca tu producto..."></label>
+            <label for="barra-busqueda"></label>
+            <input type="text" id="barra-busqueda" name="barra-busqueda" placeholder="Busca tu producto...">
 
             <!-- Menú hamburguesa -->
             <div class="menu-toggle">
@@ -175,35 +175,44 @@
 
     <footer>
         <section id="contacto">
-            <div class="contacto-top">
-                <h2>COMUNICATE CON NUESTRO EQUIPO</h2>
-                <p>Si tuviste algun inconveniente con tu producto, queres dejar una sugerencia o necesitas
-                    asesoramiento, completa el siguiente formulario con tus datos y nuestro equipo se estará comunicando
-                    con vos.</p>
-            </div>
-            <form action="">
-                <fieldset>
-                    <label for="nombres"><input type="text" id="nombres">Nombres</label>
-                    <label for="apellidos"><input type="text" id="apellidos">Apellidos</label>
-                    <label for="email"><input type="email" id="email">Email</label>
-                </fieldset>
-                <fieldset>
-                    <label for="motivo"><input type="text" id="motivo">Motivo del mensaje
+            <div class="form-container">
+                <div class="contacto-top">
+                    <h2>COMUNICATE CON NUESTRO EQUIPO</h2>
+                    <p>Si tuviste algun inconveniente con tu producto, queres dejar una sugerencia o necesitas
+                        asesoramiento, completa el siguiente formulario con tus datos y nuestro equipo se estará
+                        comunicando
+                        con vos.</p>
+                </div>
+
+                <form action="">
+                    <fieldset>
+                        <label for="nombres">Nombres</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Ingrese su nombre" required>
+
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese su apellido" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+                        <!-- </fieldset>
+
+                    <fieldset> -->
+                        <label for="motivo">Motivo del mensaje</label>
                         <select id="motivo" name="motivo">
-                            <option value="">(seleccione una opción)</option>
-                            <option value="1">Producto defectuoso</option>
-                            <option value="2">Sugerencias</option>
-                            <option value="3">Asesoramiento</option>
-                            <option value="4">Otros</option>
+                            <option value="0"></option>
+                            <option value="1">(Seleccione una opción)</option>
+                            <option value="2">Producto defectuoso</option>
+                            <option value="3">Sugerencias</option>
+                            <option value="4">Asesoramiento</option>
+                            <option value="5">Otros</option>
                         </select>
-                    </label>
-                    <label for="descripcion">
+                        <label for="descripcion"></label>
                         <textarea name="descripcion" id="descripcion" cols="30" rows="10"
                             placeholder="Escriba una breve descripción"></textarea>
-                    </label>
-                </fieldset>
-
-            </form>
+                        <button class="submit-button">Enviar</button>
+                    </fieldset>
+                </form>
+            </div>
         </section>
 
         <section id="proveedores">
@@ -221,10 +230,11 @@
         <section id="cierre">
             <h4>Seguinos en nuestras redes</h4>
             <div class="redes">
-                <img src="/img/Iconos/Facebook.png" alt="Facebook">
-                <img src="/img/Iconos/Instagram.png" alt="Instagram">
-                <img src="/img/Iconos/Pinterest.png" alt="Pinterest">
+                <a href=""> <img src="/img/Iconos/Facebook.png" alt="Facebook"></a>
+                <a href=""><img src="/img/Iconos/Instagram.png" alt="Instagram"></a>
+                <a href=""><img src="/img/Iconos/Pinterest.png" alt="Pinterest"></a>
             </div>
+            <hr>
             <div class="copyright">
                 <img src="/img/Iconos/copyright.png" alt="copyright">
                 <h5>Spectrum Bikes 2023</h5>
