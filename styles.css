@@ -32,6 +32,13 @@ body {
     /* background-color: var(--secondary); */
     background: linear-gradient(to bottom, var(--font2), var(--fonts), var(--secondary));
     color: var(--fonts);
+    background-size: cover;
+}
+
+.divider {
+    border: 1px solid var(--fonts);
+    width: 60%;
+    margin: 0 auto 20px;
 }
 
 header {
@@ -628,16 +635,26 @@ form {
     justify-content: center;
     align-items: center;
     width: 1000px;
-    height: 700px;
+    height: 800px;
     max-width: 1800px;
     margin: 20px auto 50px;
-    padding: 5px;
+    padding: 5px 0 70px ;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: -2px 2px 10px 1px #1f1f1f;
 }
 
-fieldset {
+.form-container h1 {
+    margin: 10px auto 10px;
+    padding: 5px;
+}
+
+.form-container h4 {
+    margin: 10px auto 30px;
+    padding: 5px;
+}
+
+.register-item {
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -646,14 +663,18 @@ fieldset {
     gap: 1px;
 }
 
-fieldset label {
+.register-item button {
+    margin-top: 25px;
+}
+
+.label {
     color: var(--font2);
     margin: 3px;
     padding: 1px;
     color: var(--fonts);
 }
 
-fieldset input {
+.input {
     background-color: var(--secondary);
     padding: 5px;
     margin: 1px;
@@ -664,7 +685,7 @@ fieldset input {
     width: 100%;
 }
 
-fieldset input::placeholder {
+.input::placeholder {
     color: var(--font2);
     letter-spacing: 1px;
     font-style: italic;
@@ -672,12 +693,12 @@ fieldset input::placeholder {
     opacity: 0.2;
 }
 
-fieldset input:hover {
+.input:hover {
     border: 1px solid var(--secondary);
     background-color: var(--primary);
 }
 
-fieldset textarea {
+.textarea {
     background-color: var(--secondary);
     padding: 5px;
     margin: 1px auto 15px;
@@ -690,7 +711,7 @@ fieldset textarea {
     height: 120px;
 }
 
-fieldset textarea::placeholder {
+.textarea::placeholder {
     color: var(--font2);
     letter-spacing: 1px;
     font-style: italic;
@@ -698,12 +719,12 @@ fieldset textarea::placeholder {
     opacity: 0.2;
 }
 
-fieldset textarea:hover {
+.textarea:hover {
     border: 1px solid var(--secondary);
     background-color: var(--primary);
 }
 
-fieldset select {
+.select {
     background-color: var(--secondary);
     padding: 5px;
     margin: 1px;
@@ -714,7 +735,7 @@ fieldset select {
     width: 100%;
 }
 
-fieldset select::placeholder {
+.select::placeholder {
     color: var(--font2);
     letter-spacing: 1px;
     font-style: italic;
@@ -722,7 +743,7 @@ fieldset select::placeholder {
     opacity: 0.2;
 }
 
-fieldset select:hover {
+.select:hover {
     border: 1px solid var(--secondary);
     background-color: var(--primary);
 }
