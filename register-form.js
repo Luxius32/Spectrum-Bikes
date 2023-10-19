@@ -6,11 +6,23 @@ const mailInput = document.getElementById('mail');
 const contraseñaInput = document.getElementById('contraseña');
 
 //////////////////////// FUNCIONES AUXILIARES ////////////////////////////////////
+// 
+
+// Nos traemos los usuarios del localStorage o creamos un array vacio si no hay usuarios registrados
+const users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
+
+// Función para guardar los usuarios en el LocalStorage 
+const saveToLocalStorage = () => {
+    localStorage.setItem('users', JSON.stringify(users));
+};
+
+// Función para chequear si el campo esta vacio
 const isEmpty = input => {
     // En JS el cero es un pseudo falso (falsy)
     return !input.value.trim().lenght;
 };
 
+// Función para determinar si el largo del value del input esta entre un minimo y un maximo de caracteres
 const isBetween = (input, min, max) => {
     // Nos permite ver que los caracteres esten dentro del rango establecido
     return input.value.lenght >= min && input.value.lenght < max;
@@ -35,6 +47,17 @@ const showSuccess = (input) => {
     error.textContent = "";
 }
 
+// Función para validar una dirección de email con expresiones regulares
+const isEmailValid = (input) => {
+    const re = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,4})+$/;
+    // testeamos
+    return re.test(input.value.trim());
+};
+
+const isExistingEmail = (input) => {
+    return users.some((user) => user.email === input.value)
+};
+
 // FUNCIONES DE VALIDACION DE INPUTS // 
 
 const checkTextInput = input => {
@@ -55,6 +78,28 @@ const checkTextInput = input => {
     // Si pasa por ambas validaciones , llamamos a la función de éxito y le cambiamos el estado valid a true
     showSuccess(input);
     valid = true;
+    return valid;
+};
+
+const checkEmail = (input) => {
+    // Seteamos la validez del value en falsa   
+    let valid = false;
+    if (isEmpty(input)) {
+        showError(input, 'El email es obligatorio.');
+        return;
+    }
+    if (!isEmailValid(input)) {
+        showError(input, 'El email no es valido.');
+        return;
+    }
+    if (isExistingEmail(input)) {
+        showError(input, 'El email ya se encuentra registrado.')
+        return;
+    }
+    // Si pasa por todas las validaciones llamamos a la función de éxito y cambiamos la validación a true
+    showSuccess(input);
+    valid = true;
+    // Lo retornamos para utilizarlo en otra parte
     return valid;
 };
 
@@ -81,5 +126,7 @@ const init = () => {
     // Validar cada campo por evento
     nombreInput.addEventListener('input', () => checkTextInput(nombreInput));
     apellidoInput.addEventListener('input', () => checkTextInput(apellidoInput));
+    mailInput.addEventListener('input', () => checkEmail(mailInput))
+};
 
-} 
+init();    
