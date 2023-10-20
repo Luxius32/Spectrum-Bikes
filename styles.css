@@ -853,7 +853,7 @@ form {
 .register-item small {
     color: #dc3545;
     max-width: 350px;
-    text-align: center;
+    text-align: start;
     display: none;
 }
 
