@@ -1,0 +1,106 @@
+@media (max-width:1307px) {
+    #slider-container {
+        height: 590px;
+    }
+
+    .slider {
+        height: 600px;
+    }
+
+    .slider img {
+        aspect-ratio: 15/8;
+    }
+
+    #categorias {
+        max-width: 1100px;
+    }
+
+    .categ-card {
+        width: 380px;
+    }
+
+    .categ-card:hover {
+        width: 400px;
+        height: 220px;
+    }
+}
+
+@media (max-width:1200px) {
+.logo img {
+    width: 280px;
+}
+
+#barra-busqueda {
+    width: 350px;
+}
+
+    ul {
+        font-size: 18px;
+    }
+
+    .sesion-cart {
+        font-size: 14px;
+    }
+
+    .slider img {
+        aspect-ratio: 14/9;
+    }
+
+    .ofer-redirect img {
+        width: 430px;
+        height: 280px;
+    }
+
+    .ofer-card {
+        height: 370px;
+    }
+
+    .ofer-desc p {
+        font-size: 14px;
+    }
+
+    .ofer-desc h3 {
+        font-size: 16px;
+    }
+
+    #categorias {
+        max-width: 1000px;
+    }
+
+    .categ-card {
+        width: 300px;
+    }
+
+    .categ-card:hover {
+        width: 320px;
+    }
+
+    .categ-card:hover p {
+        font-size: 30px;
+    }
+
+    #productos-ofertas h2 {
+        font-size: 30px;
+    }
+
+    .ofertas-container {
+        padding: 5px;
+        width: 110%;
+    }
+
+    .card-oferta-top h3 {
+        font-size: 12px;
+    }
+
+    .card-oferta-bot h3 {
+        font-size: 11px;
+    }
+
+    .boton-de-oferta {
+        font-size: 11px;
+    }
+
+    .form-container {
+        width: 900px;
+    }
+}
