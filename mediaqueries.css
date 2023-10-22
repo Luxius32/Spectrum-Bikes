@@ -1,3 +1,5 @@
+/**************************  WIDTH 1307 px  *************************/
+
 @media (max-width:1307px) {
     #slider-container {
         height: 590px;
@@ -25,14 +27,16 @@
     }
 }
 
-@media (max-width:1200px) {
-.logo img {
-    width: 280px;
-}
+/**************************  WIDTH 1200 px  *************************/
 
-#barra-busqueda {
-    width: 350px;
-}
+@media (max-width:1200px) {
+    .logo img {
+        width: 280px;
+    }
+
+    #barra-busqueda {
+        width: 350px;
+    }
 
     ul {
         font-size: 18px;
@@ -85,7 +89,17 @@
 
     .ofertas-container {
         padding: 5px;
-        width: 110%;
+        width: 100%;
+    }
+
+    .card-oferta {
+        width: 300px;
+        height: 380px;
+    }
+
+    .card-oferta:hover {
+        width: 320px;
+        height: 400px;
     }
 
     .card-oferta-top h3 {
@@ -104,3 +118,321 @@
         width: 900px;
     }
 }
+
+/**************************  WIDTH 992 px  *************************/
+
+@media (max-width:992px) {
+    .login a {
+        font-size: 8px
+    }
+
+    .login p {
+        font-size: 8px;
+    }
+
+    #barra-busqueda {
+        width: 290px;
+        height: 20px;
+    }
+
+    #barra-busqueda::placeholder {
+        font-size: 12px;
+    }
+
+    ul {
+        font-size: 12px;
+    }
+
+    .logo img {
+        width: 240px;
+    }
+
+    .envio {
+        font-size: 10px;
+    }
+
+    .cart img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slider img {
+        aspect-ratio: 11/9;
+    }
+
+    .ofer-card {
+        height: 320px;
+    }
+
+    .ofer-container p {
+        font-size: 12px;
+    }
+
+    .ofer-redirect img {
+        width: 340px;
+        height: 230px;
+    }
+
+    .categ-card {
+        width: 245px;
+        height: 155px;
+    }
+
+    .categ-card:hover {
+        width: 270px;
+        height: 180px;
+    }
+
+    .categ-card:hover p {
+        font-size: 25px;
+    }
+
+    #productos-oferta h2 {
+        top: -2%;
+    }
+
+    .ofertas-container {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 60px;
+        height: 615px;
+    }
+
+    .card-oferta {
+        width: 230px;
+        height: 290px;
+    }
+
+    .card-oferta-top h3 {
+        font-size: 13px;
+    }
+
+    .card-oferta-bot h3 {
+        font-size: 8px;
+    }
+
+    .card-oferta-bot img {
+        width: 14px;
+        height: 14px;
+    }
+
+    .boton-de-oferta {
+        font-size: 9px;
+        height: 21px;
+    }
+
+    .form-container {
+        width: 700px;
+    }
+
+    .contacto-top {
+        font-size: 14px;
+    }
+
+    .contacto-top h2 {
+        font-size: 28px;
+    }
+
+    .contacto-top p {
+        margin: 0px 100px;
+    }
+
+    #contacto label {
+        font-size: 14px;
+    }
+
+    .input {
+        height: 25px;
+    }
+}
+
+/**************************  WIDTH 797 px  *************************/
+
+@media (max-width:797px) {
+    header {
+        gap: 50px;
+    }
+
+    .logo-envio {
+        width: 33%;
+    }
+
+    .logo img {
+        width: 180px;
+        height: 20px;
+    }
+
+    .envio p {
+        font-size: 8px;
+    }
+
+    #barra-busqueda {
+        width: 210px;
+    }
+
+    ul {
+        font-size: 10px;
+    }
+
+    .login {
+        width: 100%;
+    }
+
+    .cart-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .navbar {
+        width: 33%;
+        position: relative;
+        bottom: 5px;
+    }
+
+    .sesion-cart {
+        position: relative;
+        padding: 5px 3px;
+        width: 33%;
+        right: 5px;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 0;
+        bottom: 4px;
+    }
+
+    .slider {
+        height: 340px;
+    }
+
+    .slider img {
+        aspect-ratio: 10/6;
+    }
+
+    #slider-container {
+        height: 340px;
+    }
+
+    .title-container {
+        height: 240px;
+    }
+
+    .ofer-desc {
+        gap: 10px;
+    }
+
+    .ofer-desc h3 {
+        font-size: 12px;
+    }
+
+    .ofer-button a {
+        font-size: 10px;
+    }
+
+    .ofer-button:hover a {
+        font-size: 12px;
+    }
+
+    .ofer-desc p {
+        font-size: 10px;
+    }
+
+    .ofer-card {
+        height: 210px;
+    }
+
+    .ofer-card img {
+        width: 250px;
+        height: 150px;
+    }
+
+    .categ-card {
+        width: 175px;
+        height: 110px;
+    }
+
+    .categ-card:hover {
+        width: 195px;
+        height: 13px;
+    }
+
+    .categ-card:hover p {
+        font-size: 20px;
+    }
+
+    .grid-categ {
+        gap: 10px;
+    }
+
+    .ofertas-container {
+        flex-wrap: wrap;
+        gap: 15px;
+        height: 670px;
+    }
+
+    .card-oferta {
+        width: 185px;
+        height: 220px;
+    }
+
+    .card-oferta:hover {
+        width: 210px;
+        height: 245px;
+    }
+
+    .card-oferta:hover h3 {
+        font-size: 10px;
+    }
+
+    #productos-oferta h2 {
+        font-size: 22px;
+    }
+
+    .card-oferta-top {
+        gap: 0;
+    }
+
+    .form-container {
+        width: 520px;
+        height: 600px;
+    }
+
+    .contacto-top {
+        width: 350px;
+        margin: auto 30px;
+    }
+
+    .contacto-top h2 {
+        font-size: 24px;
+    }
+
+    .contacto-top p {
+        font-size: 10px;
+        margin: 0 0;
+    }
+
+    .register-item {
+        width: 395px;
+    }
+
+    #contacto label {
+        font-size: 10px;
+    }
+
+    .input {
+        height: 20px;
+    }
+
+    .input::placeholder {
+        font-size: 10px;
+    }
+
+    .select {
+        height: 20px;
+    }
+
+    .slider-prov {
+        width: 90%;
+    }
+}
+
+/**************************  WIDTH 600 px  *************************/
