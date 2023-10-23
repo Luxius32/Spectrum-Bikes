@@ -557,3 +557,76 @@
         height: 40%;
     }
 }
+
+/**************************  WIDTH 480 px  *************************/
+header {
+    gap: 25px;
+}
+
+.cart img {
+    width: 15px;
+    height: 15px;
+}
+.logo img {
+    width: 100px;
+    height: 10px;
+}
+
+.envio p {
+    font-size: 6px;
+    width: 90px;
+}
+
+.envio img {
+    width: 10px;
+    height: 10px;
+}
+
+.login a {
+    font-size: 6px;
+}
+
+.slider {
+    height: 180px;
+}
+
+#slider-container {
+    height: 170px;
+}
+
+.ofer-card {
+    padding: 10px;
+}
+.ofer-card img {
+    width: 110px;
+    height: 90px;
+}
+
+.ofer-desc h3 {
+    font-size: 10px;
+    text-align: center;
+}
+
+.ofer-desc p {
+    font-size: 6px;
+}
+
+.ofer-button a {
+    right: 4px;
+    font-size: 8px;
+    position: absolute;
+    bottom: 3px;
+    width: 40px;
+}
+
+.ofer-button {
+    position: relative;
+    height: 20px;
+}
+
+.ofer-button:hover {
+
+    width: 70%;
+    height: 30px;
+   
+}
