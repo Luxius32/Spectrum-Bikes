@@ -116,8 +116,13 @@ a {
     margin-top: 10px;
 }
 
-.menu-toggle {
+#menu-list {
+    display: flex;
+}
+
+#menu-toggle {
     display: none;
+    cursor: pointer;
 }
 
 ul {
@@ -125,6 +130,12 @@ ul {
     padding: 5px;
     gap: 15px;
     font-size: 20px;
+    position: relative;
+    bottom: 0px;
+}
+
+.barra-busqueda-oculta {
+    display: none;
 }
 
 a:hover {

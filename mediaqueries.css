@@ -352,7 +352,7 @@
 
     .categ-card:hover {
         width: 195px;
-        height: 13px;
+        height: 130px;
     }
 
     .categ-card:hover p {
@@ -433,6 +433,120 @@
     .slider-prov {
         width: 90%;
     }
+
+    #cierre h4 {
+        font-size: 12px;
+    }
+
+    #cierre h5 {
+        font-size: 10px;
+    }
+
+    #cierre {
+        margin: 35px auto 0;
+        padding: 25px;
+        gap: 10px;
+    }
 }
 
 /**************************  WIDTH 600 px  *************************/
+
+@media (max-width:600px) {
+
+    #menu-list {
+        display: none;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    #barra-busqueda {
+        display: none;
+    }
+
+    .logo-envio {
+        gap: 0;
+    }
+
+    .logo img {
+        width: 150px;
+        height: 15px;
+    }
+
+    .slider,
+    #slider-container {
+        height: 260px;
+    }
+
+    .title-container {
+        height: 180px;
+    }
+
+    .ofer-desc {
+        padding: 5px;
+    }
+
+    .ofer-card img {
+        width: 170px;
+        height: 120px;
+    }
+
+    .ofer-desc p {
+        font-size: 8px;
+    }
+
+    .ofer-card {
+        height: 190px;
+        margin: 5px 0;
+    }
+
+    .categ-card {
+        width: 135px;
+        height: 110px;
+
+    }
+
+    .categ-card:hover {
+        width: 160px;
+        height: 135px;
+    }
+
+    .categ-card:hover p {
+        font-size: 18px;
+    }
+
+    .card-oferta {
+        width: 140px;
+        height: 210px;
+    }
+
+    .card-oferta-top h3 {
+        font-size: 9px;
+    }
+
+    .card-oferta-bot {
+        gap: 2px;
+    }
+
+    .card-oferta {
+        width: 150px;
+        height: 230px;
+    }
+
+    .ofertas-container {
+        height: 700px;
+    }
+
+    .form-container {
+         width: 420px;
+         height: 560px;
+    }
+
+    .contacto-top {
+        width: 350px;
+        margin: 60px 30px 0;
+    }
+
+
+}
