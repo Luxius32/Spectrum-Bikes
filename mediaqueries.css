@@ -559,74 +559,80 @@
 }
 
 /**************************  WIDTH 480 px  *************************/
-header {
-    gap: 25px;
-}
 
-.cart img {
-    width: 15px;
-    height: 15px;
-}
-.logo img {
-    width: 100px;
-    height: 10px;
-}
+@media(max-width:480px) {
 
-.envio p {
-    font-size: 6px;
-    width: 90px;
-}
+    header {
+        gap: 25px;
+    }
 
-.envio img {
-    width: 10px;
-    height: 10px;
-}
+    .cart img {
+        width: 15px;
+        height: 15px;
+    }
 
-.login a {
-    font-size: 6px;
-}
+    .logo img {
+        width: 100px;
+        height: 10px;
+    }
 
-.slider {
-    height: 180px;
-}
+    .envio p {
+        font-size: 6px;
+        width: 90px;
+    }
 
-#slider-container {
-    height: 170px;
-}
+    .envio img {
+        width: 10px;
+        height: 10px;
+    }
 
-.ofer-card {
-    padding: 10px;
-}
-.ofer-card img {
-    width: 110px;
-    height: 90px;
-}
+    .login a {
+        font-size: 6px;
+    }
 
-.ofer-desc h3 {
-    font-size: 10px;
-    text-align: center;
-}
+    .slider {
+        height: 180px;
+    }
 
-.ofer-desc p {
-    font-size: 6px;
-}
+    #slider-container {
+        height: 170px;
+    }
 
-.ofer-button a {
-    right: 4px;
-    font-size: 8px;
-    position: absolute;
-    bottom: 3px;
-    width: 40px;
-}
+    .ofer-card {
+        padding: 10px;
+    }
 
-.ofer-button {
-    position: relative;
-    height: 20px;
-}
+    .ofer-card img {
+        width: 110px;
+        height: 90px;
+    }
 
-.ofer-button:hover {
+    .ofer-desc h3 {
+        font-size: 10px;
+        text-align: center;
+    }
 
-    width: 70%;
-    height: 30px;
-   
+    .ofer-desc p {
+        font-size: 6px;
+    }
+
+    .ofer-button a {
+        right: 4px;
+        font-size: 8px;
+        position: absolute;
+        bottom: 3px;
+        width: 40px;
+    }
+
+    .ofer-button {
+        position: relative;
+        height: 20px;
+    }
+
+    .ofer-button:hover {
+
+        width: 70%;
+        height: 30px;
+    }
+
 }
