@@ -232,7 +232,7 @@ main {
     /* Permite que la imagen crezca horizontal o verticalmente segun lo que sea necesario */
     object-fit: cover;
     position: relative;
-    border-radius: 0px 0px 10px 10px;
+    /* border-radius: 0px 0px 10px 10px; */
 }
 
 hr {
@@ -344,6 +344,9 @@ h1 img {
 
 .ofer-button {
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 30px;
     margin: 2px;
     padding: 1px;
@@ -363,6 +366,7 @@ h1 img {
 
 .ofer-button a {
     color: var(--font2);
+    align-items: center;
     transition: all 0.2s ease;
 }
 
@@ -724,6 +728,8 @@ form {
     font-style: italic;
     margin: 1px;
     opacity: 0.2;
+    display: flex;
+    align-items: center;
 }
 
 .input:hover {

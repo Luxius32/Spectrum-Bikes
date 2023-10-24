@@ -504,7 +504,6 @@
     .categ-card {
         width: 135px;
         height: 110px;
-
     }
 
     .categ-card:hover {
@@ -532,6 +531,11 @@
     .card-oferta {
         width: 150px;
         height: 230px;
+    }
+
+    .card-oferta:hover {
+        width: 175px;
+        height: 255px;
     }
 
     .ofertas-container {
@@ -570,6 +574,10 @@
         height: 15px;
     }
 
+    .logo {
+        width: 200px;
+    }
+
     .logo img {
         width: 100px;
         height: 10px;
@@ -589,16 +597,25 @@
         font-size: 6px;
     }
 
+    h1 img {
+        margin: 15px auto 10px;
+    }
+
     .slider {
-        height: 180px;
+        height: 165px;
+    }
+
+    .slider img {
+        aspect-ratio: 11/6;
     }
 
     #slider-container {
-        height: 170px;
+        height: 165px;
     }
 
     .ofer-card {
         padding: 10px;
+        height: 150px;
     }
 
     .ofer-card img {
@@ -616,22 +633,86 @@
     }
 
     .ofer-button a {
-        right: 4px;
         font-size: 8px;
-        position: absolute;
-        bottom: 3px;
-        width: 40px;
     }
 
     .ofer-button {
-        position: relative;
         height: 20px;
     }
 
-    .ofer-button:hover {
+    .ofer-button:hover a {
+        font-size: 10px;
+    }
 
-        width: 70%;
+    .ofer-button:hover {
         height: 30px;
     }
 
+    .grid-categ {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categ-card:hover {
+        width: 145px;
+        height: 120px;
+    }
+
+    .ofertas-container {
+        gap: 5px;
+        padding: 0;
+    }
+
+    .card-oferta {
+        width: 112px;
+    }
+
+    .card-oferta:hover {
+        width: 130px;
+        height: 235px;
+    }
+
+    .card-oferta:hover h3{
+        font-size: 8px;
+    }
+
+    .card-oferta-bot h3 {
+        font-size: 7px;
+    }
+
+    .card-oferta-bot:hover h3 {
+        font-size: 9px;
+    }
+
+
+    .form-container {
+        width: 280px;
+    }
+
+    .contacto-top {
+        width: 230px;
+    }
+
+    .contacto-top h2 {
+        font-size: 14px;
+    }
+
+    .contacto-top p {
+        font-size: 8px;
+    }
+
+    .register-item {
+        width: 230px;
+    }
+
+    .input {
+        height: 15px;
+    }
+
+    .input::placeholder {
+        font-size: 8px;
+    }
+
+    .slider-prov {
+        gap: 10px;
+    }
 }
