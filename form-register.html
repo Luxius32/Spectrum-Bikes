@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spectrum Bikes | Register</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="mediaqueries.css">
     <link rel="shorcut icon" href="img/logoInicialesFondo.jpg">
 </head>
 
@@ -30,11 +31,11 @@
             <input type="text" id="barra-busqueda" name="barra-busqueda" placeholder="Busca tu producto...">
 
             <!-- Menú hamburguesa -->
-            <div class="menu-toggle">
+            <div id="menu-toggle">
                 <img src="/img/Iconos/menu.png" alt="Menu">
             </div>
 
-            <ul>
+            <ul id="menu-list">
                 <li><a href="#">Bicicletas</a></li>
                 <li><a href="#">Componentes</a></li>
                 <li><a href="#">Ropa</a></li>
@@ -71,7 +72,7 @@
             <!-- NOMBRE -->
             <div class="register-item">
                 <label class="label" for="nombre">Nombre <span>*</span></label>
-                <input class="input" type="text" id="nombre" placeholder="Nombre" required>
+                <input class="input" type="text" id="nombre" required>
                 <small></small>
             </div>
             <!-- NOMBRE -->
@@ -79,7 +80,7 @@
             <!-- APELLIDO -->
             <div class="register-item">
                 <label class="label" for="apellido">Apellido <span>*</span></label>
-                <input class="input" type="text" id="apellido" placeholder="Apellido" required>
+                <input class="input" type="text" id="apellido" required>
                 <small></small>
             </div>
             <!-- APELLIDO -->
@@ -87,7 +88,7 @@
             <!-- EMAIL -->
             <div class="register-item">
                 <label class="label" for="mail">Dirección de correo electrónico <span>*</span></label>
-                <input class="input" type="email" id="mail" placeholder="Ejemplo@gmail.com" required>
+                <input class="input" type="email" id="mail" required>
                 <small></small>
             </div>
             <!-- EMAIL -->
@@ -95,7 +96,7 @@
             <!-- CONTRASEÑA -->
             <div class="register-item">
                 <label class="label" for="contraseña">Contraseña <span>*</span></label>
-                <input class="input" type="password" id="contraseña" placeholder="8 caracteres minimo" min="8" max="28"
+                <input class="input" type="password" id="contraseña" min="8" max="28"
                     required>
                 <small></small>
             </div>
@@ -104,7 +105,7 @@
             <!-- DIRECCIÓN DE ENVÍO -->
             <div class="register-item">
                 <label class="label" for="telefono">Teléfono</label>
-                <input class="input" type="text" id="telefono" placeholder="Dirección">
+                <input class="input" type="text" id="telefono">
                 <small></small>
             </div>
             <!-- DIRECCIÓN DE ENVÍO -->

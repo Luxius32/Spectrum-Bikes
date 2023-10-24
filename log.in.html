@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spectrum Bikes | Log-in</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/mediaqueries.css">
     <link rel="shorcut icon" href="img/logoInicialesFondo.jpg">
 </head>
 
@@ -30,11 +31,11 @@
             <input type="text" id="barra-busqueda" name="barra-busqueda" placeholder="Busca tu producto...">
 
             <!-- Menú hamburguesa -->
-            <div class="menu-toggle">
+            <div id="menu-toggle">
                 <img src="/img/Iconos/menu.png" alt="Menu">
             </div>
 
-            <ul>
+            <ul id="menu-list">
                 <li><a href="#">Bicicletas</a></li>
                 <li><a href="#">Componentes</a></li>
                 <li><a href="#">Ropa</a></li>
@@ -71,7 +72,7 @@
             <!-- NOMBRE -->
             <div class="register-item">
                 <label class="label" for="email-sesion">Dirección de correo <span>*</span></label>
-                <input class="input" type="email" id="email-sesion" placeholder="Email" required>
+                <input class="input" type="email" id="email-sesion" required>
                 <small></small>
             </div>
             <!-- NOMBRE -->
@@ -79,7 +80,7 @@
             <!-- APELLIDO -->
             <div class="register-item">
                 <label class="label" for="pass">Contraseña <span>*</span></label>
-                <input class="input" type="password" id="pass" placeholder="Contraseña" required>
+                <input class="input" type="password" id="pass" required>
                 <small></small>
             </div>
             <!-- APELLIDO -->
