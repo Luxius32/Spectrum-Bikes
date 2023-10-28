@@ -38,7 +38,8 @@
 
             <ul id="menu-list">
                 <label for="barra-busqueda"></label>
-                <input type="text" id="barra-busqueda" name="barra-busqueda" placeholder="Busca tu producto..." class="barra-busqueda-oculta">
+                <input type="text" id="barra-busqueda" name="barra-busqueda" placeholder="Busca tu producto..."
+                    class="barra-busqueda-oculta">
                 <li><a href="#">Bicicletas</a></li>
                 <li><a href="#">Componentes</a></li>
                 <li><a href="#">Ropa</a></li>
@@ -129,40 +130,40 @@
         <section id="categorias">
             <div class="grid-categ">
                 <div class="categ-card">
-                    <a href="">
+                    <button class="category" data-category="Bicicletas">
                         <p class="categ-nombre">BICICLETAS</p>
                         <img src="/img/Categorias/bicicletas.jpg" alt="" class="categ-img">
-                    </a>
+                    </button>
                 </div>
                 <div class="categ-card">
-                    <a href="">
+                    <button class="category" data-category="Componentes">
                         <p class="categ-nombre">COMPONENTES</p>
                         <img src="/img/Categorias/Componentes.jpg" alt="" class="categ-img">
-                    </a>
+                    </button>
                 </div>
                 <div class="categ-card">
-                    <a href="">
+                    <button class="category" data-category="Ropa">
                         <p class="categ-nombre">ROPA</p>
                         <img src="/img/Categorias/ropa.jpg" alt="" class="categ-img">
-                    </a>
+                    </button>
                 </div>
                 <div class="categ-card">
-                    <a href="">
+                    <button class="category" data-category="Proteccion">
                         <p class="categ-nombre">PROTECIÓN</p>
                         <img src="/img/Categorias/protecccion.jpg" alt="" class="categ-img">
-                    </a>
+                    </button>
                 </div>
                 <div class="categ-card">
-                    <a href="">
+                    <button class="category" data-category="Accesorios">
                         <p class="categ-nombre">ACCESORIOS</p>
                         <img src="/img/Categorias/accesorioss.jpg" alt="" class="categ-img">
-                    </a>
+                    </button>
                 </div>
                 <div class="categ-card">
-                    <a href="">
+                    <button class="category active" data-category="Ver-todo">
                         <p class="categ-nombre">VER TODO</p>
                         <img src="/img/Categorias/ver todo.jpg" alt="" class="categ-img">
-                    </a>
+                    </button>
                 </div>
             </div>
         </section>
@@ -173,6 +174,7 @@
             <h2>OFERTAS DEL MES </h2>
             <div class="ofertas-container">
             </div>
+            <button class="boton-de-oferta" id="showMore">Ver más</button>
         </section>
         <hr>
     </main>
@@ -191,20 +193,17 @@
                 <form>
                     <div class="register-item">
                         <label class="label" for="nombres">Nombres</label>
-                        <input class="input" type="text" id="nombres" name="nombres" 
-                            required>
+                        <input class="input" type="text" id="nombres" name="nombres" required>
                     </div>
 
                     <div class="register-item">
                         <label class="label" for="apellidos">Apellidos</label>
-                        <input class="input" type="text" id="apellidos" name="apellidos"
-                             required>
+                        <input class="input" type="text" id="apellidos" name="apellidos" required>
                     </div>
 
                     <div class="register-item">
                         <label class="label" for="email">Email</label>
-                        <input class="input" type="email" id="email" name="email" 
-                            required>
+                        <input class="input" type="email" id="email" name="email" required>
                     </div>
                     <div class="register-item">
                         <label class="label" for="motivo">Motivo del mensaje</label>
@@ -217,8 +216,7 @@
                             <option value="5">Otros</option>
                         </select>
                         <label class="label" for="descripcion"></label>
-                        <textarea class="textarea" name="descripcion" id="descripcion" cols="30" rows="5"
-                            ></textarea>
+                        <textarea class="textarea" name="descripcion" id="descripcion" cols="30" rows="5"></textarea>
                         <button class="submit-button">Enviar</button>
                     </div>
                 </form>

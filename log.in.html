@@ -62,7 +62,7 @@
 
     <main>
         <!-- FORM -->
-        <form class="form-container form-container-login" id="register-form">
+        <form class="form-container form-container-login" id="login-form">
             <h1>INICIAR SESIÓN</h1>
 
             <h4>¿Aún no tienes una cuenta? <a href="/form-register.html">¡Creá una!</a></h4>
@@ -71,7 +71,7 @@
 
             <!-- NOMBRE -->
             <div class="register-item">
-                <label class="label" for="email-sesion">Dirección de correo <span>*</span></label>
+                <label class="label" for="email-login">Dirección de correo <span>*</span></label>
                 <input class="input" type="email" id="email-sesion" required>
                 <small></small>
             </div>
@@ -80,11 +80,12 @@
             <!-- APELLIDO -->
             <div class="register-item">
                 <label class="label" for="pass">Contraseña <span>*</span></label>
-                <input class="input" type="password" id="pass" required>
+                <input class="input" type="password" id="pass-login" required>
                 <small></small>
             </div>
             <!-- APELLIDO -->
-
+            
+            <small id="form__error"></small>
             <!-- BUTTON -->
             <div class="register-item">
                 <button class="submit-button button-register">INICIAR SESIÓN</button>
@@ -92,5 +93,6 @@
             <!-- BUTTON -->
         </form>
         <!-- FORM -->
+        <script src="/login.js"></script>
 
     </main>

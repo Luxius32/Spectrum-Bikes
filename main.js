@@ -43,10 +43,15 @@ const mostrarScroll = () => {
 
 window.addEventListener('scroll', mostrarScroll);
 
+
+
+
 // PRODUCTOS EN OFERTA
 // Defino las variables necesarias de los elementos html
 const addCarrito = document.querySelector('.boton-de-oferta');
 const ofertasContainer = document.querySelector('.ofertas-container');
+const showMoreBtn = document.querySelector('#showMore');
+const categoriesContainer = document.querySelector('.grid-categ')
 
 // Función para renderizar una lista de productos
 // Función auxiliar
@@ -69,11 +74,45 @@ const createProductTemplate = (product) => {
 
 const renderProducts = (productList) => {
     ofertasContainer.innerHTML += productList.map(createProductTemplate).join('')
+};
+
+// Función para averiguar si el índice actual renderizado de la lista de productos es igual al límite de productos
+const isLastIndexOf = () => {
+    return appState.currentProductIndex === appState.productsLimit - 1;
+};
+
+
+// primer chequeo para aplicar el filtro
+const isInactiveFilter = (element) => {
+    return (element.classList.contains('category')) && !element.classList.contains('active');
 }
+
+// Función para aplicar el filtro cuando se clickea el botón de categoria
+// Si el botón que se apretó no es un botón de categoría o ya esta activo, no hace nada
+const applyFilter = ({target}) => {
+    if (!isInactiveFilter(target)) return;
+    
+};
+
+
+
+
+
+// Función para mostrar más productos ante el click del usuario en el botón  "ver más"
+const showMoreProducts = () => {
+    appState.currentProductIndex += 1;
+    let { products, currentProductIndex } = appState;
+    renderProducts(products[currentProductIndex]);
+    if (isLastIndexOf()){
+        showMoreBtn.classList.add('hidden');
+    }
+};
 
 // Función inicializadora y renderizamos los productos
 const init = () => {
-    renderProducts(productsOffer);
-}
+    renderProducts(appState.products[0]);
+    showMoreBtn.addEventListener('click', showMoreProducts);
+    categoriesContainer.addEventListener('click', applyFilter);
+};
 
 init();
