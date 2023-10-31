@@ -426,15 +426,18 @@ h1 img {
     transition: all 0.5s ease-in-out;
 }
 
-.categ-card p {
+/* .categ-card p {
     color: var(--fonts);
     font-weight: 500;
     letter-spacing: 1px;
-}
+} */
 
 .categ-nombre {
     position: relative;
     z-index: 1;
+    color: var(--fonts);
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 .categ-img {
@@ -453,7 +456,7 @@ h1 img {
     opacity: 1;
 }
 
-.categ-card:hover p {
+.categ-card:hover button {
     color: var(--font2);
     font-size: 40px;
     transition: all 0.5s ease-in-out;
@@ -474,6 +477,13 @@ h1 img {
     border: none;
     background: none;
 }
+
+.grid-categ button {
+    z-index: 3;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 /* CARD OFERTA */
 
 #productos-oferta,

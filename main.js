@@ -51,7 +51,9 @@ window.addEventListener('scroll', mostrarScroll);
 const addCarrito = document.querySelector('.boton-de-oferta');
 const ofertasContainer = document.querySelector('.ofertas-container');
 const showMoreBtn = document.querySelector('#showMore');
-const categoriesContainer = document.querySelector('.grid-categ')
+const categoriesContainer = document.querySelector('#categorias');
+const categoriesList = document.querySelectorAll('.category');
+
 
 // Función para renderizar una lista de productos
 // Función auxiliar
@@ -89,13 +91,55 @@ const isInactiveFilter = (element) => {
 
 // Función para aplicar el filtro cuando se clickea el botón de categoria
 // Si el botón que se apretó no es un botón de categoría o ya esta activo, no hace nada
-const applyFilter = ({target}) => {
+const applyFilter = ({ target }) => {
     if (!isInactiveFilter(target)) return;
-    
+    changeFilterState(target);
+    ofertasContainer.innerHTML = '';
+    if (appState.activeFilter) {
+        renderFilterProducts();
+        appState.currentProductIndex = 0;
+        return;
+    }
+    renderProducts(appState.products[0]);
 };
 
 
 
+
+
+// Renderizar los productos filtrados
+const renderFilterProducts = () => {
+    const filterProducts = productsOffer.filter((product) => product.category === appState.activeFilter);
+    renderProducts(filterProducts);
+}
+
+// cambio el estado del filtro 
+const changeFilterState = (btn) => {
+    appState.activeFilter = btn.dataset.category;
+    changeBtnActiveState(appState.activeFilter);
+};
+
+// Función para cambiar el estado de los botones de categorías
+const changeBtnActiveState = (selectedCategory) => {
+    // lo guardo en una constante que va ser un array para poder aplicarle un forEach, ya que al seleccionarlo con el querySelecctorAll generamos una HTMLCollection
+    const categories = [...categoriesList];
+    categories.forEach((categoryBtn) => {
+        if (categoryBtn.dataset.category !== selectedCategory) {
+            categoryBtn.classList.remove('active');
+            return;
+        }
+        categoryBtn.classList.add('active');
+    })
+};
+
+// Función para mostrar u ocultar el botón de "ver mas" según corresponda
+const setShowMoreVisibility = () => {
+    if (!appState.activeFilter) {
+        showMoreBtn.classList.remove('hidden');
+        return;
+    }
+    showMoreBtn.classList.add('hidden')
+};
 
 
 // Función para mostrar más productos ante el click del usuario en el botón  "ver más"
@@ -103,7 +147,7 @@ const showMoreProducts = () => {
     appState.currentProductIndex += 1;
     let { products, currentProductIndex } = appState;
     renderProducts(products[currentProductIndex]);
-    if (isLastIndexOf()){
+    if (isLastIndexOf()) {
         showMoreBtn.classList.add('hidden');
     }
 };
@@ -114,5 +158,6 @@ const init = () => {
     showMoreBtn.addEventListener('click', showMoreProducts);
     categoriesContainer.addEventListener('click', applyFilter);
 };
+
 
 init();
