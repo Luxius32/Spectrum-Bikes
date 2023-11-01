@@ -48,7 +48,6 @@ window.addEventListener('scroll', mostrarScroll);
 
 // PRODUCTOS EN OFERTA
 // Defino las variables necesarias de los elementos html
-const addCarrito = document.querySelector('.boton-de-oferta');
 const ofertasContainer = document.querySelector('.ofertas-container');
 const showMoreBtn = document.querySelector('#showMore');
 const categoriesContainer = document.querySelector('#categorias');
@@ -57,6 +56,8 @@ const cartBtn = document.querySelector('.cart-label');
 const cartMenu = document.querySelector('.cart');
 const menuH = document.querySelector('#menu-list');
 const menuBtn = document.querySelector('#menu-toggle');
+const productsCart = document.querySelector('.cart-container');
+const total = document.querySelector('.total')
 
 // Función para renderizar una lista de productos
 // Función auxiliar
@@ -161,11 +162,119 @@ const toggleCart = () => {
     cartMenu.classList.toggle('open-cart');
 
     // Chequear si el menu hamburguesa esta abierto, lo cierro y retorno
-    if(menuH.classList.contains('open-menu')) {
+    if (menuH.classList.contains('open-menu')) {
         menuH.classList.remove('open-menu');
-        return; 
+        return;
+    };
+};
+
+
+
+
+
+
+
+// RENDERIZAR EL CARRITO
+// Nuestro carrito sera un arreglo de objetos y tendra una logica parecida al to do list
+// Setear el carrito vacio o lo que este en local storage
+
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+const saveCart = () => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+};
+
+// Ya tenemos el carrito guardado, ahora hay que armar la lógica del renderizado
+// Función para renderizar los productos del carrito 
+const renderCart = () => {
+    // capturo el lugar donde quiero mostrar el carrito
+    if (!cart.length) {
+        productsCart.innerHTML = `<p class='empty-msg'> Todavia no hay productos</p>`;
+        return;
     }
+    productsCart.innerHTML = cart.map(createCartProductTemplate).join("");
+};
+
+// Función para crear el template de un producto del carrito
+const createCartProductTemplate = (cartProduct) => {
+    const { id, titulo, imagen, precio, oferta, quantity } = cartProduct;
+    return `
+    <div class="cart-item">
+    <div class="item-info">
+        <img src=${imagen} alt="Producto-carrito">
+        <h3 class="item-title">${titulo}</h3>
+        <p class="item-bid">Precio actual ${precio}</p>
+        <span class="item-price">Precio con descuento ${oferta}</span>
+    </div>
+    <div class="item-handler">
+        <span class="quantity-handler down" data-id=${id}>-</span>
+        <span class="item-quantity">${quantity}</span>
+        <span class="quantity-handler up" data-id=${id}>+</span>
+    </div>
+</div>`
+};
+
+// Función para mostrar el total de la compra
+const showCartTotal = () => {
+    //función auxiliar que me traiga el total del carrito
+    total.innerHTML = `${getCartTotal().toFixed(2)}`
+};
+
+// FUnción para obtener el total de la compra
+const getCartTotal = () => {
+    return cart.reduce((acc, cur) => acc + Number(cur.oferta) * cur.quantity, 0)
+};
+
+// Lógica para agregar productos al carrito
+// Función para crear un objeto con la info del producto que quiero agregar al carrito o bien agregar una unidad de un producto ya incorporado al carrito
+const addProduct = (e) => {
+    // Primero mi funcion recibe el evento y despues  
+    if (!e.target.classList.contains('boton-de-oferta')) { return };
+    // Ahora me voy a guardar el dataser de producto que estoy agregando para luego revisar si existe o no en el carrito
+    // Llamo la funcion desestructuradora
+    const product = createPoductData(e.target.dataset);
+    if (isExistingCartProduct(product)) {
+        addUnitProduct(product)
+    } else {
+        // Creamos el producto en el carrito
+        createCartProduct(product);
+    }
+    updateCartState();
+};
+
+
+// Creamos un objeto con la info del prodcuto que queremos agregar
+const createCartProduct = (product) => {
+    cart = [...cart, { ...product, quantity: 1 }];
 }
+
+
+
+// Función que me va a permitit añadir una unidad al producto que ya tengo en el cart
+const addUnitProduct = (product) => {
+    cart = cart.map((cartProduct) => cartProduct.id === product.id ? { ...cartProduct, quantity: cartProduct.quantity + 1 } : cartProduct);
+};
+
+// Función desestructuradora 
+const createPoductData = (product) => {
+    const { id, titulo, imagen, precio, oferta } = product;
+    return { id, titulo, imagen, precio, oferta }
+};
+
+// Función que comprueba si el producto ua fue agregado al carrito 
+const isExistingCartProduct = (product) => {
+    return cart.find((item) => item.id === product.id);
+};
+
+// Función de actualización del carro
+const updateCartState = () => {
+    // Guardar carrito en localStorage
+    saveCart();
+    // Renderizo el carro
+    renderCart();
+    // Mostrar el total
+    showCartTotal();
+};
 
 // Función inicializadora y renderizamos los productos
 const init = () => {
@@ -173,6 +282,9 @@ const init = () => {
     showMoreBtn.addEventListener('click', showMoreProducts);
     categoriesContainer.addEventListener('click', applyFilter);
     cartBtn.addEventListener('click', toggleCart);
+    document.addEventListener('DOMContentLoaded', renderCart);
+    document.addEventListener('DOMContentLoaded', showCartTotal);
+    ofertasContainer.addEventListener('click', addProduct);
 };
 
 init();

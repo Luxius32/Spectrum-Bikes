@@ -12,8 +12,8 @@ const productsOffer = [
         id: 2,
         titulo: 'BICICLETA VENZO THORN EVO 21VEL DISK HIDRAULICO',
         imagen: 'https://rodadosmassa.com.ar/wp-content/uploads/2020/04/THORSH-500x315.jpg',
-        precio: '$328.800,00',
-        oferta: '$296.600,00',
+        precio: 328800.00,
+        oferta: '$296.600.00',
         category: 'bicicletas',
     },
     {
@@ -116,7 +116,7 @@ const productsOffer = [
         id: 15,
         titulo: 'PORTA CELULAR VAN HALEN CICLISMO TOP TUBE BAG',
         imagen: 'https://newsport.vtexassets.com/arquivos/ids/16981162-800-auto?v=638313917195170000&width=800&height=auto&aspect=true',
-        precio: '$10.200,00',
+        precio: 10200.00,
         oferta: '$9.199,00',
         category: 'accesorios',
     },
@@ -136,6 +136,6 @@ const divideProducts = (size) => {
 const appState = {
     products: divideProducts(3),
     currentProductIndex: 0,
-    productsLimit: divideProducts(3).length, 
+    productsLimit: divideProducts(3).length,
     activeFilter: null
 }
