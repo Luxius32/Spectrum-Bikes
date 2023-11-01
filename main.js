@@ -53,7 +53,10 @@ const ofertasContainer = document.querySelector('.ofertas-container');
 const showMoreBtn = document.querySelector('#showMore');
 const categoriesContainer = document.querySelector('#categorias');
 const categoriesList = document.querySelectorAll('.category');
-
+const cartBtn = document.querySelector('.cart-label');
+const cartMenu = document.querySelector('.cart');
+const menuH = document.querySelector('#menu-list');
+const menuBtn = document.querySelector('#menu-toggle');
 
 // Función para renderizar una lista de productos
 // Función auxiliar
@@ -152,12 +155,24 @@ const showMoreProducts = () => {
     }
 };
 
+// Togglear el cart y si el menú esta abierto, lo cierra. Finalmente, muestra el overlay si no habia nada abierto y se esta abriendo el carrito.
+const toggleCart = () => {
+    // Cuando el usuario haga click, va a tener la clase open-cart
+    cartMenu.classList.toggle('open-cart');
+
+    // Chequear si el menu hamburguesa esta abierto, lo cierro y retorno
+    if(menuH.classList.contains('open-menu')) {
+        menuH.classList.remove('open-menu');
+        return; 
+    }
+}
+
 // Función inicializadora y renderizamos los productos
 const init = () => {
     renderProducts(appState.products[0]);
     showMoreBtn.addEventListener('click', showMoreProducts);
     categoriesContainer.addEventListener('click', applyFilter);
+    cartBtn.addEventListener('click', toggleCart);
 };
-
 
 init();

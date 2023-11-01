@@ -37,9 +37,6 @@
             </div>
 
             <ul id="menu-list">
-                <label for="barra-busqueda"></label>
-                <input type="text" id="barra-busqueda" name="barra-busqueda" placeholder="Busca tu producto..."
-                    class="barra-busqueda-oculta">
                 <li><a href="#">Bicicletas</a></li>
                 <li><a href="#">Componentes</a></li>
                 <li><a href="#">Ropa</a></li>
@@ -56,10 +53,23 @@
                 <a href="/log.in.html">Inicia sesión</a>
             </div>
 
+            <div class="cart-label">
+                <img src="/img/Iconos/carrito2.png" alt="carrito" class="cart-icon">
+            </div>
+
             <div class="cart">
-                <label for="cart-toggle" class="cart-label">
-                    <img src="/img/Iconos/carrito2.png" alt="carrito" class="cart-icon">
-                </label>
+                <h2>Tus productos</h2>
+
+                <div class="cart-container"></div>
+
+                <span class="divider"></span>
+
+                <div class="cart-total">
+                    <p>Total:</p>
+                    <span class="total">$30.000</span>
+                </div>
+                <button class="btn-buy">Comprar</button>
+                <button class="btn-delete">Vaciar carrito</button>
             </div>
         </div>
     </header>
