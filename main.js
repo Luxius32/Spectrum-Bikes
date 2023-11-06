@@ -58,6 +58,8 @@ const menuH = document.querySelector('#menu-list');
 const menuBtn = document.querySelector('#menu-toggle');
 const productsCart = document.querySelector('.cart-container');
 const total = document.querySelector('.total')
+const buyBnt = document.querySelector('.btn-buy')
+const deleteBtn = document.querySelector('.btn-delete')
 
 // Función para renderizar una lista de productos
 // Función auxiliar
@@ -168,6 +170,22 @@ const toggleCart = () => {
     };
 };
 
+// const toggleMenu = () => {
+//     if (menuH.style.display === "none") {
+//         menuH.style.display = "block";
+//     } else {
+//         menuH.style.display = "flex";
+//     }
+// };
+const toggleMenu = () => {
+    if (menuH.style.display === "none") {
+        menuH.style.display = "flex";
+    } else {
+        menuH.style.display = "none";
+    }
+};
+
+
 
 
 
@@ -266,6 +284,17 @@ const isExistingCartProduct = (product) => {
     return cart.find((item) => item.id === product.id);
 };
 
+// Función que habilita o deshabilita el boton de comprar y vaciar en el carrito, si el carrito esta vacio, que no aparezca ninguno de los dos botones
+const disableBtn = (btn) => {
+    if (!cart.length) {
+        // Cambiamos la clase del boton para que el mismo no se visualice
+        btn.classList.add('hidden');
+    } else {
+        btn.classList.remove('hidden');
+    }
+
+}
+
 // Función de actualización del carro
 const updateCartState = () => {
     // Guardar carrito en localStorage
@@ -274,6 +303,8 @@ const updateCartState = () => {
     renderCart();
     // Mostrar el total
     showCartTotal();
+    // Misma función para los dos botones
+
 };
 
 // Función inicializadora y renderizamos los productos
@@ -282,9 +313,12 @@ const init = () => {
     showMoreBtn.addEventListener('click', showMoreProducts);
     categoriesContainer.addEventListener('click', applyFilter);
     cartBtn.addEventListener('click', toggleCart);
+    menuBtn.addEventListener('click', toggleMenu);
     document.addEventListener('DOMContentLoaded', renderCart);
     document.addEventListener('DOMContentLoaded', showCartTotal);
     ofertasContainer.addEventListener('click', addProduct);
+    disableBtn(buyBnt);
+    disableBtn(deleteBtn);
 };
 
 init();

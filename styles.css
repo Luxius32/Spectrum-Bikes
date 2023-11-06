@@ -114,6 +114,7 @@ a {
     height: 70px;
     max-width: 450px;
     margin-top: 10px;
+    position: relative;
 }
 
 #menu-list {
@@ -123,6 +124,8 @@ a {
 #menu-toggle {
     display: none;
     cursor: pointer;
+    position: absolute;
+    left: 28%;
 }
 
 ul {
